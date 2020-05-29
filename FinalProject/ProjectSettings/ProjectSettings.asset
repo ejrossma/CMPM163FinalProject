@@ -672,7 +672,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -686,10 +686,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 240bc8d0-416a-4ea4-a80e-cc2a8bb23b6c
+  cloudProjectId: c1ca5f5b-1294-4905-a4cb-62fb05d548c6
   framebufferDepthMemorylessMode: 0
   projectName: Final Project
-  organizationId: jlao3
+  organizationId: elyrossman
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
