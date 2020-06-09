@@ -9,7 +9,7 @@ public class GunController : MonoBehaviour
     Animator m_animator;
     
     public GameObject mainBullet;
-    public float speed = 100f;
+    public float speed = 200f;
 
     void Start()
     {
