@@ -15,7 +15,7 @@ public class lightFlash : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) || Input.GetKeyDown("z"))
         {
             myLight.enabled = true;
         } else

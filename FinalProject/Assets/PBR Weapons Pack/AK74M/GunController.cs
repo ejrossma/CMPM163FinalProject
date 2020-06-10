@@ -16,6 +16,8 @@ public class GunController : MonoBehaviour
         m_animator = GetComponent<Animator>();
     }
     // Update is called once per frame
+    public TimeManager timeManager;
+
     void Update()
     {
 
@@ -24,6 +26,12 @@ public class GunController : MonoBehaviour
             m_animator.SetTrigger("Shoot");
             Bullet();
         }
+        if(Input.GetKeyDown("z"))
+        {
+            m_animator.SetTrigger("Shoot");
+            BulletSlow();
+        }
+
     }
 
     void Bullet()
@@ -35,6 +43,18 @@ public class GunController : MonoBehaviour
         instBullet.transform.rotation = Quaternion.Euler(angle, 0 , rotation);
         Rigidbody instBulletRigidbody = instBullet.GetComponent<Rigidbody>();
         instBulletRigidbody.AddForce(Vector3.left * speed);
+
+    }
+    void BulletSlow()
+    {
+        float angle = 90;
+        float rotation = 90;
+        GameObject instBullet = Instantiate(mainBullet, transform.position, Quaternion.identity) as GameObject;
+        instBullet.transform.position = new Vector3(3.2f, 1.564f, -0.7952048f);
+        instBullet.transform.rotation = Quaternion.Euler(angle, 0 , rotation);
+        Rigidbody instBulletRigidbody = instBullet.GetComponent<Rigidbody>();
+        instBulletRigidbody.AddForce(Vector3.left * speed);
+        timeManager.DoSlowMotion();
 
     }
 }
